@@ -1,11 +1,13 @@
 # commonlit readability challenge
 
 My Attempt on this Kaggle competition, I'm using that dataset for my Udacity ND.
+Here you can find an explanation on the problem, and how I solve it in a couple of weeks as best as I could.
 
 &nbsp;
 
-## Table of contents
 
+## Table of contents
+- [*How to use this repository*](##How-to-use-this-repository)
 - [*Domain Background*](##Domain-Background)
 - [*Problem Statement*](##Problem-Statement)
 - [*Dataset and Inputs*](##build-your-website-in-3-steps)
@@ -13,7 +15,20 @@ My Attempt on this Kaggle competition, I'm using that dataset for my Udacity ND.
 - [Benchmark Model](##Benchmark-Model)
 - [Evaluation Metrics](##Evaluation-Metrics)
 - [Project Design](##Project-Design)
+- [Results](##Results)
 - [License](###License)
+
+&nbsp;
+
+## How to use this repository
+
+If you want to understand my end-to-end approach please read the notebooks in this order:
+- tools.py (optimonal to read, it includes the custom feature functions)
+- exploratory_analysis.ipynb
+- first_model.ipynb
+- final_model.ipynb
+
+if you only want to check the results go directly to the final_model.ipynb or the Results section bellow.
 
 &nbsp;
 
@@ -60,7 +75,7 @@ The solution is to create a model that accurately predicts the complexity of a t
 
 ## Benchmark Model
 
-I will use two models as benchmark, first a basic linear regression between the Flesch-Kincaid test index and the target variable, this is the most popular complexity index so performing better that it, its an accomplishment in on itself. This model will give us an idea of how good are classic indicators at estimating the real complexity of a excerpt.
+I will a linear regression between the Flesch-Kincaid test and the target as benchmark, this is the most popular complexity index so performing better that it, its an accomplishment in on itself. This model will give us an idea of how good are classic indicators at estimating the real complexity of a excerpt.
 
 &nbsp;
 
@@ -70,13 +85,17 @@ The benchmark for the model will be the root mean square error (RMSE) using the 
 
 &nbsp;
 
-## Project Design
+## Final Model Design
 
-Right now I haven’t design a full solution, I’m still exploring ideas to tackle this complicated problem and so far I see 3 possible candidates:
-
-* THIS SECTION IS STILL WIP
+<img src='mi_diagrama.png'>
 
 &nbsp;
+
+The final model is obtain after a series of steps, as described above, the process calculates the custom features, and also the TF-IDF (Term frequency - inverse document frequency) matrix. I used that matrix to train the first model, a Ridge Regression that gives the initial guess for the complexity. After that, I used a second model, a Support Vector Regressor that combines the Ridge first guess + The custom features to give the final guess.
+
+## Results
+
+After aplying the process described above, the final prediction got an RMSE of 0.7739 in the test set, better than the bechmark model (0.966)
 
 ### License
 
