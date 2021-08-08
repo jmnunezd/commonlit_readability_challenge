@@ -8,6 +8,7 @@ Here you can find an explanation on the problem, and how I solve it in a couple 
 
 ## Table of contents
 - [*How to use this repository*](##How-to-use-this-repository)
+- [*Dependencies*](##How-to-use-this-repository)
 - [*Domain Background*](##Domain-Background)
 - [*Problem Statement*](##Problem-Statement)
 - [*Dataset and Inputs*](##build-your-website-in-3-steps)
@@ -23,12 +24,26 @@ Here you can find an explanation on the problem, and how I solve it in a couple 
 ## How to use this repository
 
 If you want to understand my end-to-end approach please read the notebooks in this order:
-- tools.py (optimonal to read, it includes the custom feature functions)
+- tools.py (optional to read, it includes the custom feature functions)
 - exploratory_analysis.ipynb
 - first_model.ipynb
 - final_model.ipynb
 
 if you only want to check the results go directly to the final_model.ipynb or the Results section bellow.
+
+&nbsp;
+
+
+## Dependencies
+
+Please in order to run this, be sure you have the following packages installed in your enviroment:
+ - numpy
+ - pandas
+ - sklearn
+ - nltk
+ - textstat (!pip install textstats)
+ - seaborn
+ - xgboost
 
 &nbsp;
 
