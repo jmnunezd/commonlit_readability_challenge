@@ -43,7 +43,6 @@ Please in order to run this, be sure you have the following packages installed i
  - nltk
  - textstat (!pip install textstats)
  - seaborn
- - xgboost
 
 &nbsp;
 
